@@ -6,13 +6,13 @@ int Chili::getCardsPerCoin(int coins)const{
     return 3;
   }
   else if(coins==2){
-    return 5;
+    return 6;
   }
   else if(coins==3){
-    return 7;
+    return 8;
   }
   else if(coins==4){
-    return 8;
+    return 9;
   }
 }
 string Chili::getName()const{
