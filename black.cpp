@@ -9,10 +9,10 @@ int black::getCardsPerCoin(int coins)const{
     return 4;
   }
   else if(coins==3){
-    return 6;
+    return 5;
   }
   else if(coins==4){
-    return 7;
+    return 6;
   }
 }
 

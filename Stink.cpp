@@ -6,13 +6,13 @@ int Stink::getCardsPerCoin(int coins)const{
     return 3;
   }
   else if(coins==2){
-    return 6;
+    return 5;
   }
   else if(coins==3){
-    return 8;
+    return 7;
   }
   else if(coins==4){
-    return 9;
+    return 8;
   }
 }
 string Stink::getName()const{
