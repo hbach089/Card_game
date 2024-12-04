@@ -14,10 +14,11 @@ int Stink::getCardsPerCoin(int coins)const{
   else if(coins==4){
     return 8;
   }
+  return 0;
 }
 string Stink::getName()const{
   return "Stink";
 }
 void Stink::print(ostream& out)const{
-  out<<"S"<<endl;
+  out<<"S";
 }

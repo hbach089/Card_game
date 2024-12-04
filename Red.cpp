@@ -14,10 +14,11 @@ int Red::getCardsPerCoin(int coins)const{
   else if(coins==4){
     return 5;
   }
+  return 0;
 }
 string Red::getName()const{
   return "Red";
 }
 void Red::print(ostream& out)const{
-  out<<"R"<<endl;
+  out<<"R";
 }

@@ -14,10 +14,11 @@ int garden::getCardsPerCoin(int coins)const{
   else if(coins==4){
     return 0;
   }
+  return 0;
 }
 string garden::getName()const{
   return "garden";
 }
 void garden::print(ostream& out)const{
-  out<<"g"<<endl;
+  out<<"g";
 }

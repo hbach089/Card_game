@@ -14,10 +14,11 @@ int Blue::getCardsPerCoin(int coins)const{
   else if(coins==4){
     return 10;
   }
+  return 0;
 }
 string Blue::getName()const{
   return "Blue";
 }
 void Blue::print(ostream& out)const{
-  out<<"B"<<endl;
+  out<<"B";
 }

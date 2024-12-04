@@ -14,6 +14,7 @@ int black::getCardsPerCoin(int coins)const{
   else if(coins==4){
     return 6;
   }
+  return 0;
 }
 
 string black::getName()const{
@@ -21,6 +22,6 @@ string black::getName()const{
 }
 
 void black::print(ostream& out)const{
-  out<<"b"<<endl;
+  out<<"b";
 }
 

@@ -2,7 +2,7 @@
 #define CARD_H
 
 #include <iostream>
-#include <string.h>
+#include <string>
 
 using namespace std;
 
@@ -13,8 +13,7 @@ class Card{
   virtual int getCardsPerCoin(int)const=0;
   virtual string getName()const=0;
   virtual void print(ostream&) const=0;
-  friend virtual ostream & operator << (ostream &, const Card &);
-
+  friend ostream & operator << (ostream &, const Card &);
 };
 
 ostream & operator << (ostream & out, const Card & card){

@@ -14,10 +14,11 @@ int Chili::getCardsPerCoin(int coins)const{
   else if(coins==4){
     return 9;
   }
+  return 0;
 }
 string Chili::getName()const{
   return "Chili";
 }
 void Chili::print(ostream& out)const{
-  out<<"C"<<endl;
+  out<<"C";
 }

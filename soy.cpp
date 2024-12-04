@@ -14,10 +14,11 @@ int soy::getCardsPerCoin(int coins)const{
   else if(coins==4){
     return 7;
   }
+  return 0; 
 }
 string soy::getName()const{
   return "soy";
 }
 void soy::print(ostream& out)const{
-  out<<"s"<<endl;
+  out<<"s";
 }
