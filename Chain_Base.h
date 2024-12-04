@@ -8,7 +8,6 @@ using namespace std;
 class Chain_Base {
     public:
         virtual void print(ostream& out) const = 0;
-        // No clue if I need to add more here...
 };
 
 #endif

@@ -2,6 +2,10 @@
 
 using namespace std;
 
+//reconstructs the DiscardPile from file
+DiscardPile::DiscardPile(istream& input, const CardFactory* factory) {
+  //to do
+}
 
 DiscardPile& DiscardPile::operator+=(Card* card){
   discpile.push_back(card);
@@ -24,12 +28,9 @@ Card* DiscardPile::pickUp(){
  return back;
 }
 
-void DiscardPile::print(std::ostream& out){
-  if(!discpile.empty()){
-    for(int i=0;i<discpile.size();i++){
-      // discpile[i]->print(out);
-      out<<discpile[i]<<" ";
-    }
+void DiscardPile::print(std::ostream& out) const{
+  for (const auto& card : discpile) {
+    out << *card << " ";
   }
 }
 

@@ -1,5 +1,5 @@
-#ifndef PLAYER_H
-#define PLAYER_H
+#ifndef CARDFACTORY_H
+#define CARDFACTORY_H
 
 #include <iostream>
 #include "Deck.h"

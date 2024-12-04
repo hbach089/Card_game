@@ -6,8 +6,9 @@ Deck::Deck(const CardFactory*cf){
   shuffleDeck();
 }
 
+// reconstructs the deck from file. 
 Deck::Deck(istream& ipt, const CardFactory*cardfact){
-
+  //to do
 }
 
 

@@ -22,11 +22,8 @@ class Deck: public vector<Card*>{
 };
 
 ostream & operator<<(ostream& out,const Deck& deck){
-  for(auto card:deck){
-    if(card){
-      card->print(out);
-    }
-    out<<"";
+  for(const auto& card : deck){
+    out << *card << " ";
   }
   return out;
 }

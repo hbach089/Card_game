@@ -12,8 +12,17 @@ class TradeArea{
   public:
   TradeArea(istream&, const CardFactory*);
   TradeArea& operator+=(Card*);
-  bool legal(Card*);
+  bool legal(Card*) const;
   Card* trade(string);
-  int numCards();
+  int numCards() const;
+  friend ostream & operator << (ostream &, const TradeArea &);
 };
+
+ostream & operator<<(ostream& out,const TradeArea& ta){
+  for(const auto& card : ta.clist) {
+    out << *card << " ";
+  }
+  return out;
+}
+
 #endif

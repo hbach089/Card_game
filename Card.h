@@ -8,11 +8,10 @@ using namespace std;
 
 class Card{
   protected:
-  string c_name;
+  virtual void print(ostream&) const=0; //"Virtual Friend Function Idiom"
   public:
   virtual int getCardsPerCoin(int)const=0;
   virtual string getName()const=0;
-  virtual void print(ostream&) const=0;
   friend ostream & operator << (ostream &, const Card &);
 };
 
