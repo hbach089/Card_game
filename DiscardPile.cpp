@@ -7,11 +7,13 @@ DiscardPile::DiscardPile(istream& input, const CardFactory* factory) {
   //to do
 }
 
+// discards the card to the pile.
 DiscardPile& DiscardPile::operator+=(Card* card){
   discpile.push_back(card);
   return *this;
 }
 
+//returns but does not remove the top card from the discard pile.
 Card* DiscardPile::top(){
  if(discpile.empty()){
   return nullptr;
@@ -19,6 +21,7 @@ Card* DiscardPile::top(){
  return discpile.back();
 }
 
+//returns and removes the top card from the discard pile.
 Card* DiscardPile::pickUp(){
  if(discpile.empty()){
   return nullptr;
@@ -28,31 +31,9 @@ Card* DiscardPile::pickUp(){
  return back;
 }
 
+//prints all the cards in discard pile
 void DiscardPile::print(std::ostream& out) const{
   for (const auto& card : discpile) {
     out << *card << " ";
   }
 }
-
-// DiscardPile& DiscardPile::operator+=(Card* card){
-//   this->push_back(card);
-//   return *this;
-// }
-
-// Card* DiscardPile::pickUp(){
-//  if(this->empty()){
-//   return nullptr;
-//  }
-//  Card*ct=top();
-//  this->pop_back();
-//  return ct;
-// }
-
-// Card* DiscardPile::top(){
-//  if(this->empty()){
-//   return nullptr;
-//  }
-//  Card*ct=this->back();
-//  return ct;
-// } 
-

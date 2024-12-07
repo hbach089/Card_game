@@ -3,7 +3,10 @@
 // reconstruct the Hand from file
 Hand::Hand(istream& in, const CardFactory* factory) {
     //to do
-} 
+}
+
+//default constructor
+Hand::Hand() {}
 
 //adds the card to the rear of the hand.
 Hand& Hand::operator+=(Card* card) {
@@ -32,11 +35,11 @@ Card* Hand::top() const {
 //returns and removes the Card at a given index.
 Card* Hand::operator[](int i) {
     if (i >= 0 && i < cards.size()) {
-        auto& list = cards._Get_container();
-        auto it = list.begin();
+        auto& lst = cards._Get_container();
+        auto it = lst.begin();
         for (int x = 0; x < i; ++it, ++x); //Incrementing to our index i.
         Card* card = *it;
-        list.erase(it); //I cannot figure out why erase is not working here.
+        lst.erase(it); //should compile
         return card;
     }
     return nullptr;

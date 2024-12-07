@@ -1,8 +1,8 @@
 #include "Player.h"
 
 //constructor that creates a Player with a given name. 
-Player::Player(string& n){
-  n = name;
+Player::Player(const string& n){
+  name = n;
   coins = 0;
   maxNumOfChains = 2;
 }
@@ -15,6 +15,11 @@ Player::Player(istream& input, const CardFactory* factory) {
 //get the name of the player
 string Player::getName() const{
   return name;
+}
+
+//Returns the player's hand
+Hand& Player::getHand() {
+  return hand;
 }
 
 //get the number of coins currently held by the player.
@@ -62,9 +67,9 @@ void Player::printHand(ostream& out, bool all) const {
   //to do, Idk where to put/get the hand/deck yet!
   if(all){
     //Entire hand
-    
+    out << hand;
   } else {
     //Top card
-
+    out << hand.top();
   }
 }

@@ -11,6 +11,7 @@ using namespace std;
 class DiscardPile{
   vector<Card*> discpile; 
   public:
+  DiscardPile() {};
   DiscardPile(istream&, const CardFactory*);
   DiscardPile& operator+=(Card*);
   Card* pickUp();
@@ -23,32 +24,7 @@ ostream& operator<<(ostream& out,DiscardPile& dp){
   if (!dp.discpile.empty()) {
     out << dp.discpile.back();
   }
-  // if(dp.discpile.empty()){
-  //   out<<"";
-  // }
-  // else{
-  //   out<<dp.discpile.back();
-  // }
   return out;
 }
-
-// ostream& operator<<(ostream& out,DiscardPile& dp){
-//   if(dp.empty()){
-//     out<<"";
-//     return out;
-//   }
-//   else{
-//     Card*last=dp.top();
-//     out<<*last;
-//     return out;
-//   }
-// }
-
-
-
-//TODOOOOOOO: DISCARDPILE.CPP!!!!!!!!!!!!!!!!!!!!!!
-//deck
-//tous les cartes
-// et le template Chain (manuel textbook)
 
 #endif

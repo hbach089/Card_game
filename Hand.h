@@ -13,6 +13,7 @@ class Hand{
     private:
     queue<Card*, list<Card*>> cards; //we can use a std::list to remove at an arbitrary location efficiently with a std::queue adapter.
     public:
+    Hand();
     Hand(istream&, const CardFactory*);
     Hand& operator+=(Card* card);
     Card* play();

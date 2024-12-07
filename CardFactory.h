@@ -17,7 +17,7 @@ using namespace std;
 
 class CardFactory{
   private:
-  vector<Card*> cards;
+  vector<Card*> deck;
   static CardFactory*cf;
   CardFactory();
   public:

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "Chain.h"
+#include "Hand.h"
 
 using namespace std;
 
@@ -19,15 +20,16 @@ class Player{
   int coins;
   int maxNumOfChains;
   vector<Chain<Card>*> chains;
-  //Might be missing the player's hand/deck?
+  Hand hand;
   public:
-    Player(std::string&);
+    Player(const std::string&);
     Player(istream&, const CardFactory*);
     string getName() const;
     int getNumCoins() const;
     Player& operator+=(int);
     int getMaxNumChains() const;
     int getNumChains() const;
+    Hand& getHand();
     Chain<Card>& operator[](int i);
     void buyThirdChain();
     void printHand(ostream&, bool) const;
